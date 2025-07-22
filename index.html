@@ -60,16 +60,13 @@
         <!-- Task Description Section -->
         <section id="task" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Task Description</h3>
-            <div class="space-y-6 bg-white p-6 rounded-lg shadow-md">
-                <p class="text-lg">The task is composed of two multimodal subtasks. Participants can choose to participate in one or both.</p>
-                <div>
-                    <h4 class="text-2xl font-semibold mb-2">Subtask A: Static Image Ranking</h4>
-                    <p>Given a context sentence with a potentially idiomatic expression (PIE), participants must rank a set of 5 images according to how well they visually capture the idiomatic meaning within that specific context.</p>
-                </div>
-                <div>
-                    <h4 class="text-2xl font-semibold mb-2">Subtask B: Image Sequence Completion</h4>
-                    <p>In this subtask, participants are given a target expression and an incomplete image sequence (like a comic strip). The objective is to select the most appropriate image to conclude the visual sequence, which could represent either the idiomatic or literal meaning of the expression.</p>
-                </div>
+            <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                <p class="text-lg">AdMIRe 2.0 features a single <strong>Static Image Ranking</strong> task. Participants receive a context sentence containing a PIE and a set of five images. They must rank these images based on how accurately each depicts the idiomatic meaning in context.</p>
+                <p class="text-lg font-semibold">Settings:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>The task is zero-shot for all languages except English. Only the English dataset will be released for fine-tuning or few-shot learning.</li>
+                    <li>Automatically generated captions for each image will be provided, enabling purely text-based systems if preferred.</li>
+                </ul>
             </div>
         </section>
 
@@ -78,9 +75,10 @@
             <h3 class="text-3xl font-bold mb-4 section-title">Examples</h3>
             <div class="space-y-8 bg-white p-6 rounded-lg shadow-md">
                 <div>
-                    <h4 class="text-2xl font-semibold mb-4">Subtask A Example: "bad apple"</h4>
-                    <p class="mb-4 text-lg">For a sentence where "bad apple" is used idiomatically (e.g., "The team's efforts were spoiled by one bad apple."), participants rank images. The expected ranking would prioritize images showing the idiomatic meaning.</p>
+                    <h4 class="text-2xl font-semibold mb-4">Static Image Ranking Example: "bad apple"</h4>
+                    <p class="mb-4 text-lg">For a sentence like, <em>“The team's efforts were spoiled by one bad apple.”</em>, rank images by how well they illustrate the idiomatic meaning.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                        <!-- Images unchanged -->
                         <div>
                             <img src="image/1.png" alt="Idiom Image: Kids spraying graffiti" class="w-full h-auto rounded-lg shadow-md border">
                             <p class="mt-2 font-semibold text-sm">1. Idiom Synonym</p>
@@ -103,68 +101,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Placeholder for Subtask B -->
-                <div>
-                    <h4 class="text-2xl font-semibold mb-2 mt-8">Subtask B Example</h4>
-                    <p class="mb-4 text-lg">This subtask requires completing an image sequence. </p>
-                   <div class="p-4 rounded-lg bg-gray-50">
-                      <h5 class="text-xl font-semibold mb-4">Subtask B Example: "bad apple"</h5>
-
-                      <!-- Given sequence panels + "?" slot -->
-                      <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="text-center">
-                          <img src="image/fig_1.png"
-                               alt="Panel 1: kids in classroom"
-                               class="w-full h-auto rounded-lg shadow-md border">
-                          <p class="mt-2 text-sm">1. Many kids at their desks</p>
-                        </div>
-                        <div class="text-center">
-                          <img src="image/fig_2.png"
-                               alt="Panel 2: boy launching paper plane"
-                               class="grid grid-cols-3 gap-4 mb-6">
-                          <p class="mt-2 text-sm">2. One boy makes a paper plane</p>
-                        </div>
-                        <div class="text-center p-6 border-2 border-dashed rounded-lg">
-                          <span class="text-3xl font-bold text-gray-400">?</span>
-                          <p class="mt-2 text-sm">3. Complete the sequence</p>
-                        </div>
-                      </div>
-
-                      <!-- Candidate endings -->
-                      <p class="mb-2 font-semibold">Candidate Images:</p>
-                      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                        <div>
-                          <img src="image/fig_3.png"
-                               alt="Option A: chaotic classroom ending"
-                               class="w-full h-auto rounded-lg shadow-md border">
-                          <p class="mt-2 font-semibold text-sm">A. Idiomatic ending</p>
-                        </div>
-                        <div>
-                          <img src="image/lit_1.png"
-                               alt="Option B: fresh apples and one rotten apple"
-                               class="w-full h-auto rounded-lg shadow-md border">
-                          <p class="mt-2 font-semibold text-sm">B. Literal "rotten apple"</p>
-                        </div>
-                        <div>
-                          <img src="image/lit_2.png"
-                               alt="Option C: hand picking out a bad apple"
-                               class="w-full h-auto rounded-lg shadow-md border">
-                          <p class="mt-2 font-semibold text-sm">C. Literal picking bad fruit</p>
-                        </div>
-                        <div>
-                          <img src="image/lit_3.png"
-                               alt="Option D: boy tossing an apple into trash"
-                               class="w-full h-auto rounded-lg shadow-md border">
-                          <p class="mt-2 font-semibold text-sm">D. Literal discard</p>
-                        </div>
-                      </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
+            </section>
 
         <!-- Important Dates Section -->
         <section id="dates" class="mb-12 scroll-mt-24">
@@ -186,9 +123,13 @@
         <section id="data" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Data</h3>
             <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
-                <p>The dataset will include nominal and verbal potentially idiomatic expressions (PIEs) from a diverse set of languages: English, French, Arabic, Turkish, Chinese, Portuguese, and German. Each language will have a dedicated team of experts to create and curate the data.</p>
-                <p>The created data will be licensed under Creative Commons Attribution-ShareAlike 4.0.</p>
-                 <button class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 disabled:bg-gray-400" disabled>Data Download (Coming Soon)</button>
+                <p>The AdMIRe 2.0 dataset covers around 30 languages from the UNIDIVE network to assess cross-lingual and multilingual generalization. Each PIE is paired with:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Five images (consistent style) spanning idiomatic synonyms, literal synonyms, related vs non-synonymous visuals, and a distractor.</li>
+                    <li>At least two context sentences per idiom: one idiomatic, one literal.</li>
+                    <li>Automatically generated descriptive captions for each image.</li>
+                </ul>
+                <p>All data undergo rigorous human review and ethical clearance. Released under CC BY-SA 4.0. English data is available for fine-tuning; other languages are zero-shot only.</p>
             </div>
         </section>
 
@@ -196,12 +137,12 @@
         <section id="evaluation" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Evaluation</h3>
             <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
-                <p>Submissions will be evaluated using the following metrics for each subtask:</p>
-                <ul class="list-disc list-inside ml-4">
-                    <li><strong>Subtask A (Image Ranking):</strong> Top Image Accuracy and Normalized Discounted Cumulative Gain (NDCG).</li>
-                    <li><strong>Subtask B (Sequence Completion):</strong> Completion Accuracy and Labeling F1 Score (for identifying idiomatic vs. literal expressions).</li>
+                <p>Submissions are evaluated using:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li><strong>Top Image Accuracy:</strong> Whether the most representative image is correctly ranked first.</li>
+                    <li><strong>Normalized Discounted Cumulative Gain (NDCG@5):</strong> Weighted by [3, 1, 0, 0, 0] to assess overall ranking quality and break ties.</li>
                 </ul>
-                <p>A leaderboard will be available during the evaluation period.</p>
+                <p>Final rankings are based on the average Top Image Accuracy across all languages, with each language contributing equally to the overall score.</p>
             </div>
         </section>
 
