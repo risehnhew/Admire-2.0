@@ -78,7 +78,7 @@
         </section>
 
         <!-- Task Description Section -->
-        <section id="task" class="mb-12 scroll-mt-24">
+<!--         <section id="task" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Task Description</h3>
             <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
                 <p class="text-lg">AdMIRe 2.0 features a single <strong>Static Image Ranking</strong> task. Participants receive a context sentence containing a PIE and a set of five images. They must rank these images based on how accurately each depicts the idiomatic meaning in context. The required output is <strong>only a ranking</strong> (a permutation of the five images) from most to least appropriate for the expression. </p>
@@ -87,7 +87,25 @@
                     <li>The task is zero-shot for all languages except English. Only the English dataset will be released for fine-tuning or few-shot learning.</li>
                     <li>Automatically generated captions for each image will be provided, enabling purely text-based systems if preferred.</li>
                 </ul> -->
-            </div>
+            <!-- </div> -->
+        <!-- </section> --> -->
+        <section id="task" class="mb-12 scroll-mt-24">
+          <h3 class="text-3xl font-bold mb-4 section-title">Task Description</h3>
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+            <p class="text-lg">
+              AdMIRe 2.0 features a single <strong>Static Image Ranking</strong> task. For each item, systems receive a context sentence containing a potentially idiomatic expression (PIE) and five candidate images. Participating systems must:
+            </p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+              <li><strong>Predict the sentence type</strong> (idiomatic vs. literal) for the given context.</li>
+              <li><strong>Rank the five images</strong> by how well they depict the intended meaning in that context.</li>
+            </ul>
+
+            <!-- <p class="text-lg font-semibold">Settings:</p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+              <li>The task is zero-shot for all languages except English. Only the English dataset may be used for fine-tuning or few-shot learning.</li>
+              <li>Automatically generated captions for each image are provided to enable text-only or multimodal approaches.</li>
+            </ul> -->
+          </div>
         </section>
 
         <!-- Examples Section -->
