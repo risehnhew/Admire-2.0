@@ -21,7 +21,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header Section -->
     <header class="bg-gray-800 text-white text-center py-12 px-4">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-bold mb-2">AdMIRe 2.0</h1>
@@ -29,7 +28,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav class="bg-gray-700 text-white sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4">
             <div class="flex justify-center items-center py-4 flex-wrap">
@@ -39,50 +37,189 @@
                 <a href="#dates" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Important Dates</a>
                 <a href="#data" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Data</a>
                 <a href="#evaluation" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Evaluation</a>
+                <a href="#faq" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">FAQ</a>
                 <a href="#organizers" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Organizers</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto p-4 md:p-8">
+    <section id="deadline-update" class="bg-yellow-100 border-l-4 border-yellow-400 text-yellow-900 my-4">
+        <div class="max-w-5xl mx-auto px-4 py-3">
+            <p class="font-semibold">Update – Shared Task Evaluation Deadline</p>
+            <p>
+                We would like to inform all participants that the end phase of the shared task
+                evaluation has been extended by an additional two days.
+                The current deadline is <strong>11 December 2025, 13:00 (GMT+1)</strong>.
+            </p>
+        </div>
+    </section>
 
-        <!-- Welcome Section -->
+
+    <main class="max-w-5xl mx-auto p-4 md:p-8">
+        <section id="first-edition" class="my-8 md:my-12">
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <div class="flex justify-center gap-4">
+                <img
+                  src="image/top1.png"
+                  alt="Top image 1"
+                  class="h-48 md:h-56 w-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="image/top2.png"
+                  alt="Top image 2"
+                  class="h-48 md:h-56 w-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+        </section>
+
         <section id="welcome" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Welcome</h3>
             <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
                 <p>Welcome to the official website for <strong>AdMIRe 2.0</strong>, an expanded task for interpreting potentially idiomatic expressions (PIEs) across text and visual modalities. Understanding non-compositional language remains a major challenge in NLP.</p>
-                <p>Building on the foundations of SemEval-2025 Task 1 (AdMIRe), this new iteration introduces key updates, including the addition of verbal PIEs and broader language coverage with French, Arabic, Turkish, Chinese, Portuguese, and German. We aim to advance multi-lingual and multi-modal evaluation of idiomatic language understanding.</p>
-                <p class="font-semibold">Join our mailing list for updates: <a href="#" class="text-blue-600 hover:underline">AdMIRe-challenge</a></p>
+                <p>Building on the foundations of SemEval-2025 Task 1 (AdMIRe), this new iteration introduces key updates, including the addition of verbal PIEs and significantly broader language coverage—spanning over 30 languages through the UNIDIVE network. We aim to advance multilingual and multimodal evaluation of idiomatic language understanding.</p>
+                <p class="font-semibold">
+                  Join our mailing list for updates:
+                  <a
+                    href="https://groups.google.com/g/admire2-mwe-sharedtask"
+                    class="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    AdMIRe 2.0 mailing list
+                  </a>
+                </p>
+
             </div>
         </section>
 
-        <!-- Task Description Section -->
         <section id="task" class="mb-12 scroll-mt-24">
-            <h3 class="text-3xl font-bold mb-4 section-title">Task Description</h3>
-            <div class="space-y-6 bg-white p-6 rounded-lg shadow-md">
-                <p class="text-lg">The task is composed of two multimodal subtasks. Participants can choose to participate in one or both.</p>
+          <h3 class="text-3xl font-bold mb-4 section-title">Task Description</h3>
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+            <p class="text-lg">
+              AdMIRe 2.0 features a single <strong>Static Image Ranking</strong> task. For each item, systems receive a context sentence containing a potentially idiomatic expression (PIE) and five candidate images. Participating systems must:
+            </p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+              <li><strong>Predict the sentence type</strong> (idiomatic vs. literal) for the given context.</li>
+              <li><strong>Rank the five images</strong> by how well they depict the intended meaning in that context.</li>
+            </ul>
+
+            </div>
+        </section>
+
+        <section id="examples" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">Examples</h3>
+            <div class="space-y-8 bg-white p-6 rounded-lg shadow-md">
                 <div>
-                    <h4 class="text-2xl font-semibold mb-2">Subtask A: Static Image Ranking</h4>
-                    <p>Given a context sentence with a potentially idiomatic expression (PIE), participants must rank a set of 5 images according to how well they visually capture the idiomatic meaning within that specific context.</p>
-                </div>
-                <div>
-                    <h4 class="text-2xl font-semibold mb-2">Subtask B: Image Sequence Completion</h4>
-                    <p>In this subtask, participants are given a target expression and an incomplete image sequence (like a comic strip). The objective is to select the most appropriate image to conclude the visual sequence, which could represent either the idiomatic or literal meaning of the expression.</p>
+                    <h4 class="text-2xl font-semibold mb-4">Static Image Ranking Example: "bad apple"</h4>
+                    <p class="mb-4 text-lg">For a sentence like, <em>“The team's efforts were spoiled by one bad apple.”</em>, rank images by how well they illustrate the idiomatic meaning.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                        <div>
+                            <img src="image/1.png" alt="Idiom Image: Kids spraying graffiti" class="w-full h-auto rounded-lg shadow-md border">
+                            <p class="mt-2 font-semibold text-sm">1. Idiom Synonym</p>
+                        </div>
+                        <div>
+                            <img src="image/2.png" alt="Idiom Related: Boy knocking over tea" class="w-full h-auto rounded-lg shadow-md border">
+                            <p class="mt-2 font-semibold text-sm">2. Idiom Related</p>
+                        </div>
+                        <div>
+                            <img src="image/3.png" alt="Literal Related: Bag of apples" class="w-full h-auto rounded-lg shadow-md border">
+                            <p class="mt-2 font-semibold text-sm">3. Literal Related</p>
+                        </div>
+                        <div>
+                            <img src="image/4.png" alt="Literal Image: A rotten apple" class="w-full h-auto rounded-lg shadow-md border">
+                             <p class="mt-2 font-semibold text-sm">4. Literal Synonym</p>
+                        </div>
+                        <div>
+                            <img src="image/5.png" alt="Distractor: A sugar-coated peach" class="w-full h-auto rounded-lg shadow-md border">
+                            <p class="mt-2 font-semibold text-sm">5. Distractor</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Examples Section (unchanged for brevity) -->
-        <!-- The entire examples section content remains as provided -->
+        <section id="dates" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">Important Dates</h3>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <ul class="list-disc list-inside space-y-3 text-lg">
+                    <li><span class="font-semibold">17 September 2025:</span> Publishing trial data and the baselines</li>
+                    <li><span class="font-semibold">3 December 2025:</span> Publication of test blind data</li>
+                    <li><span class="font-semibold">8 December 2025:</span> Direct Submission deadline</li>
+                    <li><span class="font-semibold">11 December 2025, 13:00 (GMT+1):</span>
+                    End phase of shared task evaluation (extended deadline) </li>
 
-        <!-- Important Dates Section (unchanged) -->
+                    <li>
+                        <span class="font-semibold">2 January 2026:</span> Submission deadline for system description papers.
+                        <div class="mt-1 ml-5 text-base text-gray-700">
+                            Please submit your paper via <a href="https://openreview.net/group?id=eacl.org/EACL/2026/Workshop/MWE#tab-recent-activity" class="text-blue-600 hover:underline font-medium" target="_blank">OpenReview</a>.
+                            <br>
+                            <span class="text-red-600 font-semibold">Note:</span> Ensure you select the submission type: <strong>System Description Papers: AdMIRe 2 Shared Task</strong>.
+                        </div>
+                    </li>
+                    <li><span class="font-semibold">23 January 2026:</span> Notification of acceptance</li>                    
+                    <li><span class="font-semibold">3 February 2026:</span> Submission deadline for camera-ready papers</li>
+                    <li><span class="font-semibold">24–29 March 2026:</span> EACL, including the MWE workshop (to confirm)</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-600">All deadlines are 23:59 UTC-12 ("anywhere on Earth").</p>
+            </div>
+        </section>
 
-        <!-- Data Section (unchanged) -->
+        <section id="data" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">Data</h3>
+            <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
+                <p>The AdMIRe 2.0 dataset covers around 30 languages from the UNIDIVE network to assess cross-lingual and multilingual generalization. Each PIE is paired with:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Five images (consistent style) spanning idiomatic synonyms, literal synonyms, related vs non-synonymous visuals, and a distractor.</li>
+                    <li>At least two context sentences per idiom: one idiomatic, one literal.</li>
+                    <li>Automatically generated descriptive captions for each image.</li>
+                </ul>
+                <p>All data undergo rigorous human review and ethical clearance. Released under CC BY-SA 4.0. English data is available for fine-tuning. You are welcome to use any external resource or synthetic data in your system and play with few-shot scenarios, but we won’t provide test instances for languages during the preparation phase.</p>
+                <p class="mt-4">
+                  📂
+                  <a
+                    href="https://semeval2025-task1.github.io/data/training/training_data.html"
+                    class="text-blue-600 hover:underline"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    Download Trial & Training Data (AdMIRe 1)
+                  </a>
+                </p>
 
-        <!-- Evaluation Section (unchanged) -->
+            </div>
+        </section>
 
-        <!-- Organizers Section -->
+        <section id="evaluation" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">Evaluation</h3>
+            <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
+                <p>Submissions are evaluated using:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li><strong>Top Image Accuracy:</strong> Whether the most representative image is correctly ranked first.</li>
+                    <li><strong>Normalized Discounted Cumulative Gain (NDCG@5):</strong> Weighted by [3, 1, 0, 0, 0] to assess overall ranking quality and break ties.</li>
+                </ul>
+                <p>Final rankings are based on the average Top Image Accuracy across all languages, with each language contributing equally to the overall score.</p>
+            </div>
+        </section>
+
+        <section id="faq" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">FAQ</h3>
+            <div class="space-y-4 text-lg bg-white p-6 rounded-lg shadow-md">
+                <p>Have questions about the task, data, or participation? We've compiled answers to frequently asked questions in our official Google Doc.</p>
+                <p class="mt-4">
+                  ❓
+                  <a
+                    href="https://docs.google.com/document/d/1u65LP1gNwIKFCPrZnfLYQ3Nb-HC2NDxpeW2l_IKWBQM/edit?usp=sharing"
+                    class="text-blue-600 hover:underline"
+                    target="_blank" rel="noopener noreferrer"
+                  >
+                    View the AdMIRe 2.0 FAQ (Google Doc)
+                  </a>
+                </p>
+            </div>
+        </section>
         <section id="organizers" class="mb-12 scroll-mt-24">
             <h3 class="text-3xl font-bold mb-4 section-title">Organizers</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-white p-6 rounded-lg shadow-md">
@@ -123,10 +260,25 @@
                 </div>
             </div>
         </section>
+        <section id="acknowledgment" class="mb-12 scroll-mt-24">
+          <h3 class="text-3xl font-bold mb-4 section-title">Acknowledgment</h3>
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-6">
+            <p class="text-lg">
+              The event is also co-organised by CA21167 COST action UniDive, funded by COST (European Cooperation in Science and Technology).
+            </p>
+
+
+
+            <div class="grid grid-cols-2 gap-6 mt-6 items-center">
+                  <img src="image/UniDive_Logo.png" alt="UniDive Logo" class="h-24 md:h-28 mx-auto object-contain">
+                  <img src="image/COST_LOGO_rgb_highresolution.jpg" alt="COST Logo" class="h-24 md:h-28 mx-auto object-contain">
+                </div>
+
+          </div>
+        </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6">
         <p>&copy; 2025 AdMIRe 2.0 Task Organizers. All rights reserved.</p>
     </footer>
