@@ -37,10 +37,10 @@
                 <a href="#dates" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Important Dates</a>
                 <a href="#data" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Data</a>
                 <a href="#evaluation" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Evaluation</a>
+                <a href="#leaderboard" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-yellow-500 text-yellow-300">Leaderboard</a>
                 <a href="#faq" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">FAQ</a>
                 <a href="#organizers" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Organizers</a>
                 <a href="#papers" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600">Papers</a>
-
             </div>
         </div>
     </nav>
@@ -197,6 +197,165 @@
                 <p>Final rankings are based on the average Top Image Accuracy across all languages, with each language contributing equally to the overall score.</p>
             </div>
         </section>
+
+        <section id="leaderboard" class="mb-12 scroll-mt-24">
+        <section id="leaderboard" class="mb-12 scroll-mt-24">
+            <h3 class="text-3xl font-bold mb-4 section-title">Leaderboard</h3>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                
+                <div class="flex border-b border-gray-200 mb-6">
+                    <button onclick="openTab('img-text')" id="btn-img-text" class="tab-btn px-6 py-3 font-semibold text-blue-600 border-b-2 border-blue-600 focus:outline-none transition-colors">
+                        Image & Text
+                    </button>
+                    <button onclick="openTab('text-only')" id="btn-text-only" class="tab-btn px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-gray-700 focus:outline-none transition-colors">
+                        Text Only
+                    </button>
+                </div>
+
+                <div id="img-text" class="tab-content block">
+                    <p class="mb-4 text-gray-700 text-sm">
+                        Ranking for the <strong>Multimodal</strong> setting (Context + 5 Images).
+                    </p>
+                    <div class="overflow-x-auto border rounded-lg">
+                        <table class="min-w-full text-left text-sm whitespace-nowrap">
+                            <thead class="uppercase tracking-wider border-b-2 border-gray-200 bg-gray-50 text-gray-600">
+                                <tr>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Rank</th>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Team Name</th>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Top-1 Accuracy</th>
+                                    <th class="px-6 py-3 font-bold">nDCG Score</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 bg-white">
+                                <tr class="bg-yellow-50 hover:bg-yellow-100 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-yellow-600">1 🏆</td>
+                                    <td class="px-6 py-4 font-bold text-gray-900">ITUNLP</td>
+                                    <td class="px-6 py-4 text-gray-900">0.60</td>
+                                    <td class="px-6 py-4 text-gray-900">0.85</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">2 🥈</td>
+                                    <td class="px-6 py-4 font-semibold text-gray-900">DCSN-NLP</td>
+                                    <td class="px-6 py-4 text-gray-700">0.53</td>
+                                    <td class="px-6 py-4 text-gray-700">0.81</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">3 🥉</td>
+                                    <td class="px-6 py-4 font-semibold text-gray-900">ITUNLP2</td>
+                                    <td class="px-6 py-4 text-gray-700">0.52</td>
+                                    <td class="px-6 py-4 text-gray-700">0.70</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">4</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">tiberiucarp</td>
+                                    <td class="px-6 py-4 text-gray-700">0.50</td>
+                                    <td class="px-6 py-4 text-gray-700">0.80</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">5</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">PolyFrame</td>
+                                    <td class="px-6 py-4 text-gray-700">0.35</td>
+                                    <td class="px-6 py-4 text-gray-700">0.73</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">6</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">ITU VisAffect</td>
+                                    <td class="px-6 py-4 text-gray-700">0.33</td>
+                                    <td class="px-6 py-4 text-gray-700">0.72</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">7</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">IdiomRanker-X</td>
+                                    <td class="px-6 py-4 text-gray-700">0.30</td>
+                                    <td class="px-6 py-4 text-gray-700">0.71</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">8</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">3K2T</td>
+                                    <td class="px-6 py-4 text-gray-700">0.13</td>
+                                    <td class="px-6 py-4 text-gray-700">0.21</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="text-only" class="tab-content hidden">
+                    <p class="mb-4 text-gray-700 text-sm">
+                        Ranking for the <strong>Text-Only</strong> setting (Context + Image Captions).
+                    </p>
+                    <div class="overflow-x-auto border rounded-lg">
+                        <table class="min-w-full text-left text-sm whitespace-nowrap">
+                            <thead class="uppercase tracking-wider border-b-2 border-gray-200 bg-gray-50 text-gray-600">
+                                <tr>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Rank</th>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Team Name</th>
+                                    <th class="px-6 py-3 font-bold border-r border-gray-200">Top-1 Accuracy</th>
+                                    <th class="px-6 py-3 font-bold">nDCG Score</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 bg-white">
+                                <tr class="bg-yellow-50 hover:bg-yellow-100 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-yellow-600">1 🏆</td>
+                                    <td class="px-6 py-4 font-bold text-gray-900">ITUNLP</td>
+                                    <td class="px-6 py-4 text-gray-900">0.56</td>
+                                    <td class="px-6 py-4 text-gray-900">0.83</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">2 🥈</td>
+                                    <td class="px-6 py-4 font-semibold text-gray-900">LST</td>
+                                    <td class="px-6 py-4 text-gray-700">0.41</td>
+                                    <td class="px-6 py-4 text-gray-700">0.76</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">3 🥉</td>
+                                    <td class="px-6 py-4 font-semibold text-gray-900">alexandru412</td>
+                                    <td class="px-6 py-4 text-gray-700">0.32</td>
+                                    <td class="px-6 py-4 text-gray-700">0.59</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-gray-500">4</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">PolyFrame</td>
+                                    <td class="px-6 py-4 text-gray-700">0.32</td>
+                                    <td class="px-6 py-4 text-gray-700">0.71</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <p class="mt-4 text-xs text-gray-500 text-right">
+                    * Results are final as of December 2025.
+                </p>
+            </div>
+        </section>
+
+        <script>
+            function openTab(tabName) {
+                // Hide all contents
+                var contents = document.getElementsByClassName('tab-content');
+                for (var i = 0; i < contents.length; i++) {
+                    contents[i].classList.add('hidden');
+                    contents[i].classList.remove('block');
+                }
+
+                // Reset all buttons to inactive style
+                var btns = document.getElementsByClassName('tab-btn');
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].classList.remove('text-blue-600', 'border-blue-600');
+                    btns[i].classList.add('text-gray-500', 'border-transparent');
+                }
+
+                // Show selected content
+                document.getElementById(tabName).classList.remove('hidden');
+                document.getElementById(tabName).classList.add('block');
+
+                // Highlight selected button
+                var activeBtn = document.getElementById('btn-' + tabName);
+                activeBtn.classList.remove('text-gray-500', 'border-transparent');
+                activeBtn.classList.add('text-blue-600', 'border-blue-600');
+            }
+        </script>
 
         <section id="papers" class="mb-12 scroll-mt-24">
   <h3 class="text-3xl font-bold mb-4 section-title">Paper Submission Requirements</h3>
